@@ -1,11 +1,21 @@
 <template>
   <div>
-    <nuxt/>
-    <my-footer/>
+    <el-container>
+      <el-header>
+        Header
+      </el-header>
+      <el-main>
+        <nuxt/>
+      </el-main>
+      <el-footer>
+        <!-- <my-footer/> -->
+      </el-footer>
+    </el-container>
   </div>
 </template>
 
 <script>
+
 import MyFooter from '~/components/Footer.vue'
 
 export default {

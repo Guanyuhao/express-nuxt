@@ -24,4 +24,9 @@ router.get('/users/:id', function (req, res, next) {
   }
 })
 
+
+router.post('/register',(req,res,next)=>{
+
+})
+
 export default router

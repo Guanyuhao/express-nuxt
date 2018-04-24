@@ -11,6 +11,7 @@
         </nuxt-link>
       </li>
     </ul>
+    
   </section>
 </template>
 
@@ -26,6 +27,14 @@ export default {
     return {
       title: 'Users'
     }
+  },
+  data () {
+    return {
+
+    }
+  },
+  created () {
+
   }
 }
 </script>
