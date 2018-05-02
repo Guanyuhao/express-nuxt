@@ -17,8 +17,12 @@
     "cross-spawn": "^6.0.5",
     "express": "^4.15.3",
     "iview": "^2.13.0",
+    "jsonwebtoken": "^8.2.1",
+    "md5": "^2.2.1",
+    "mongoose": "^5.0.17",
     "nuxt": "^1.0.0-rc3",
-    "source-map-support": "^0.4.15"
+    "source-map-support": "^0.4.15",
+    "vue-style-loader": "^4.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -30,6 +34,8 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1"
   }
 }

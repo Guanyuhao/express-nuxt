@@ -1,6 +1,9 @@
-const NODE_ENV = process.env.NODE_ENV || 'develop';
-const mysqlConfig = require('./mysql')(NODE_ENV);
+const NODE_ENV = process.env.NODE_ENV || 'development';
+// const mysqlConfig = require('./mysql')(NODE_ENV);
 
-module.exports = {
-    mysqlConfig,
+import globalConfig from './global'
+
+export default  {
+    // mysqlConfig,
+    globalConfig,
 }

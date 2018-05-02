@@ -1,16 +1,12 @@
 <template>
-  <div>
-    <el-container>
-      <el-header>
-        Header
-      </el-header>
-      <el-main>
-        <nuxt/>
-      </el-main>
-      <el-footer>
-        <!-- <my-footer/> -->
-      </el-footer>
-    </el-container>
+  <div class="layout">
+      <Layout>
+        <Header></Header>
+        <Content>
+          <nuxt/>
+        </Content>
+        <Footer><MyFooter /></Footer>
+    </Layout>
   </div>
 </template>
 

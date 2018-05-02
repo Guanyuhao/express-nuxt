@@ -7,14 +7,14 @@ module.exports = (node_env) => {
         port:''
     }
     switch(node_env){
-        case 'develop':
+        case 'development':
             mysqlConfig.host = '127.0.0.1';
             mysqlConfig.user = 'roots';
             mysqlConfig.database = 'dev';
             mysqlConfig.password = '123456';
             mysqlConfig.port = '3306';           
             break;
-        case 'prod':
+        case 'production':
             mysqlConfig.host = '';
             mysqlConfig.user = '';
             mysqlConfig.database = '';

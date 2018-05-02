@@ -16,7 +16,21 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/css/main.css',
+    'iview/dist/styles/iview.css'
+  ],
+   /*
+  ** rout config 
+  */
+  router: {
+    // middleware: ['change-page-col'],
+    linkActiveClass: 'link-active',
+    scrollBehavior(to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    },
+    extendRoutes(routes) {}
+  },
   /*
   ** Add axios globally
   */
@@ -24,7 +38,7 @@ module.exports = {
   ** Add axios globally
   */
   plugins: [
-    { src: '~plugins/iview',ssr:false}
+    { src: '~plugins/iview',ssr:true}
   ],
   build: {
     vendor: ['axios','iview'],
@@ -39,6 +53,7 @@ module.exports = {
         //   loader: 'eslint-loader',
         //   exclude: /(node_modules)/
         // })
+        
       }
     }
   }
