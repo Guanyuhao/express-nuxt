@@ -8,7 +8,9 @@ export default () => {
     state: {
       token: '',
       user: {},
-      articles: {}
+      articles: {},
+      locales: ['en', 'fr'],
+      locale: 'en'
     },
     getters,
     mutations,

@@ -7,5 +7,10 @@ export default {
   },
   SET_ARTICLES(state, data) {
     state.articles = data
+  },
+  SET_LANG(state, locale) {
+    if (state.locales.indexOf(locale) !== -1) {
+      state.locale = locale
+    }
   }
 }

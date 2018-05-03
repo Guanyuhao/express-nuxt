@@ -11,8 +11,8 @@ const router = Router()
 router
     .post('/login',login)
     .post('/register',register)
-    .get('/api/user', getUserInfo)
-    .patch('/api/user', checkToken, patchUserInfo)
+    .get('/user', getUserInfo)
+    .patch('/user', checkToken, patchUserInfo)
 // Add USERS Routes
 
 

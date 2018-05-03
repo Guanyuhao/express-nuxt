@@ -17,8 +17,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/main.css',
-    'iview/dist/styles/iview.css'
+    '~/assets/css/main.scss',
+    'element-ui/lib/theme-chalk/index.css'
   ],
    /*
   ** rout config 
@@ -29,7 +29,11 @@ module.exports = {
     scrollBehavior(to, from, savedPosition) {
       return { x: 0, y: 0 }
     },
-    extendRoutes(routes) {}
+    extendRoutes(routes) {},
+    middleware:'i18n'
+  },
+  generate: {
+   
   },
   /*
   ** Add axios globally
@@ -38,10 +42,11 @@ module.exports = {
   ** Add axios globally
   */
   plugins: [
-    { src: '~plugins/iview',ssr:true}
+    { src: '~plugins/element-ui',ssr:true},
+    { src: '~/plugins/i18n.js'}
   ],
   build: {
-    vendor: ['axios','iview'],
+    vendor: ['axios','element-ui'],
     /*
     ** Run ESLINT on save
     */

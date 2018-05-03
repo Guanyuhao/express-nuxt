@@ -1,34 +1,44 @@
 <template>
-  <div class="layout">
-      <Layout>
-        <Header></Header>
-        <Content>
-          <nuxt/>
-        </Content>
-        <Footer><MyFooter /></Footer>
-    </Layout>
+  <div class="default">
+    <el-container>
+
+      <el-header height='30px'>
+
+        <MyTop />
+
+      </el-header>
+
+      <el-main> 
+
+        <nuxt/>
+
+      </el-main>
+
+      <el-footer>
+
+        <MyFooter />
+
+      </el-footer>
+      
+    </el-container>
   </div>
 </template>
 
 <script>
 
+import MyTop from '~/components/Top.vue'
+
 import MyFooter from '~/components/Footer.vue'
 
 export default {
   components: {
-    MyFooter
+    MyTop, MyFooter
   }
 }
 </script>
 
 <style>
-.container
-{
-  margin: 0;
-  width: 100%;
-  padding: 100px 0;
-  text-align: center;
-}
+
 
 .button, .button:visited
 {

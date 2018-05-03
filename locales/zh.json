@@ -1,0 +1,16 @@
+{
+    "links": {
+      "home": "主页",
+      "about": "关于",
+      "english": "Version Anglaise",
+      "french": "啊啊"
+    },
+    "home": {
+      "title": "啊啊",
+      "introduction": " FranÃ§ais."
+    },
+    "about": {
+      "title": "Ã propos",
+      "introduction": "Ã"
+    }
+  }

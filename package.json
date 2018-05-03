@@ -15,6 +15,7 @@
     "axios": "^0.16.2",
     "cross-env": "^5.0.1",
     "cross-spawn": "^6.0.5",
+    "element-ui": "^2.3.7",
     "express": "^4.15.3",
     "iview": "^2.13.0",
     "jsonwebtoken": "^8.2.1",
@@ -22,6 +23,7 @@
     "mongoose": "^5.0.17",
     "nuxt": "^1.0.0-rc3",
     "source-map-support": "^0.4.15",
+    "vue-i18n": "^7.6.0",
     "vue-style-loader": "^4.1.0"
   },
   "devDependencies": {
