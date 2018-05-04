@@ -12,5 +12,12 @@
     "about": {
       "title": "About",
       "introduction": "This page is made to give you more informations."
+    },
+    "topNav": {
+      "zh": "chinese",
+      "en": "english"
+    },
+    "browser": {
+      "title": "browser"
     }
   }

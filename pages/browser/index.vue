@@ -1,16 +1,4 @@
-<template>
-  <div class="browser">
-browser
-  </div>
-</template>
-
 <script>
-export default {
-  
-}
+import browser from '~/pages/_lang/browser'
+export default browser
 </script>
-<style lang="scss" scoped>
-    
-</style>
-
-

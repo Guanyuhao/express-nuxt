@@ -9,7 +9,7 @@ export default () => {
       token: '',
       user: {},
       articles: {},
-      locales: ['en', 'fr'],
+      locales: ['en', 'zh'],
       locale: 'en'
     },
     getters,

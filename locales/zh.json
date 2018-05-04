@@ -12,5 +12,12 @@
     "about": {
       "title": "Ã propos",
       "introduction": "Ã"
+    },
+    "topNav": {
+      "zh": "中文",
+      "en": "english"
+    },
+    "browser": {
+      "title": "浏览器"
     }
   }
