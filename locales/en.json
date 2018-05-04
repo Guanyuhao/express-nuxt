@@ -2,8 +2,8 @@
     "links": {
       "home": "Home",
       "about": "About",
-      "english": "English version",
-      "french": "French version"
+      "english": "English",
+      "chinese": "中文"
     },
     "home": {
       "title": "Welcome",

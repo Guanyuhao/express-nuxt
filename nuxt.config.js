@@ -42,8 +42,10 @@ module.exports = {
   ** Add axios globally
   */
   plugins: [
-    { src: '~plugins/element-ui',ssr:true},
-    { src: '~/plugins/i18n.js'}
+    { src: '~plugins/element-ui',ssr:false},
+    { src: '~/plugins/i18n.js'},
+    { src: '~/plugins/components.js'}
+    
   ],
   build: {
     vendor: ['axios','element-ui'],

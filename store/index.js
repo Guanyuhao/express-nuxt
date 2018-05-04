@@ -10,7 +10,7 @@ export default () => {
       user: {},
       articles: {},
       locales: ['en', 'zh'],
-      locale: 'en'
+      locale: 'zh'
     },
     getters,
     mutations,
