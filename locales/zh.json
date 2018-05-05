@@ -18,6 +18,10 @@
       "en": "english"
     },
     "browser": {
-      "title": "浏览器"
+      "title": "浏览器",
+      "home": "主页",
+      "block": "区块",
+      "transaction": "交易",
+      "token": "令牌"
     }
   }

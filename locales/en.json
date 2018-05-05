@@ -18,6 +18,10 @@
       "en": "english"
     },
     "browser": {
-      "title": "browser"
+      "title": "browser",
+      "home": "Home",
+      "block": "Block",
+      "transaction": "Transaction",
+      "token": "Token"
     }
   }

@@ -14,7 +14,7 @@
 
       </el-main>
 
-      <el-footer>
+      <el-footer height='116px'>
 
         <MyFooter />
 
@@ -38,7 +38,9 @@ export default {
 </script>
 
 <style>
-
+.el-header,.el-footer{
+  padding: 0;
+}
 
 .button, .button:visited
 {
