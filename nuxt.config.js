@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: '区块链浏览器',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -42,7 +42,7 @@ module.exports = {
   ** Add axios globally
   */
   plugins: [
-    { src: '~plugins/element-ui',},
+    { src: '~plugins/element-ui',ssr:false},
     { src: '~/plugins/i18n.js'},
     { src: '~/plugins/components.js'}
     

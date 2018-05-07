@@ -21,12 +21,18 @@ export default {
     },
     production: {
       host: '192.168.1.95',
-      domain: '192.168.1.95:3000'
+      domain: 'http//192.168.1.95:3000'
     },
     app: {
       host: '127.0.0.1',
       port: 3000,
       routerBaseApi: 'api'
+    },
+    browserApi: {
+      pact:'http',
+      host: '192.168.1.230',
+      port: 80,
+      routerBaseApi: ''      
     }
   }
   

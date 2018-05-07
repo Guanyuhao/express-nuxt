@@ -1,4 +1,4 @@
 <script>
-import browser from '~/pages/_lang/browser'
-export default browser
+import browser_home from '~/pages/_lang/browser/index.vue'
+export default browser_home
 </script>

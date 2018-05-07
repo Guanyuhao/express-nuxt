@@ -4,19 +4,13 @@
     style="width: 100%"
     :row-class-name="tableRowClassName"
     stripe>
-        <el-table-column
-            prop="date"
-            label="日期"
-            width="180">
-        </el-table-column>
-        <el-table-column
-            prop="name"
-            label="姓名"
-            width="180">
-        </el-table-column>
-        <el-table-column
-            prop="address"
-            label="地址">
+        <el-table-column v-for="(item, index) in tableCounm" 
+        :key="index"
+        :prop="item.prop"
+        :label="item.label"
+        :width="item.width"
+        align='center'
+        :class-name='index==3&&isFee ? "c808080":""'>
         </el-table-column>
     </el-table>
   </template>
@@ -25,44 +19,49 @@
     export default {
       data() {
         return {
+            isFee:true,
             tableCounm:[
                 {
-                    prop:'data',
-                    width:'180',
-                    label:'日期'
+                    prop:'blockNum',
+                    width:'',
+                    label:'快高度'
                 },
                 {
-                    prop:'data',
-                    width:'180',
-                    label:'姓名'
+                    prop:'time',
+                    width:'',
+                    label:'时间戳'
                 },
                 {
-                    prop:'data',
-                    width:'180',
-                    label:'地址'
+                    prop:'tradnum',
+                    width:'',
+                    label:'交易数'
+                },
+                {
+                    prop:'currency',
+                    width:'',
+                    label:'奖励'
                 }
             ],
             tableData: [
                 {
-                    date: '2016-05-02',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
+                    blockNum: '45156',
+                    time: +new Date(),
+                    tradnum: 123,
+                    currency: '123ETH'
                 }, 
                 {
-                    date: '2016-05-04',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1517 弄'
+                    blockNum: '45156',
+                    time: +new Date(),
+                    tradnum: 123,
+                    currency: '123ETH'
                 }, 
                 {
-                    date: '2016-05-01',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1519 弄'
+                    blockNum: '45156',
+                    time: +new Date(),
+                    tradnum: 123,
+                    currency: '123ETH'
                 }, 
-                {
-                    date: '2016-05-03',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1516 弄'
-                }
+                
             ]
         }
       },
@@ -82,16 +81,25 @@
     }
   </script>
 
-  <style>
+
+  <style lang="scss">
   /* .el-table .odd-row {
     background: #ffffff;
   } */
-  .el-table .el-table__header th{
-      background: #f3f3f4;
-  }
-    .el-table td, .el-table th.is-leaf{
-            border-bottom: none;
+  .el-table {
+    thead {
+        color: #333333;
     }
+    .c808080 {
+      color: #808080
+    }
+    .el-table__header th{
+        background: #f3f3f4;
+    }
+  }
+  .el-table td, .el-table th.is-leaf{
+        border-bottom: none;
+   }
   .el-table .even-row {
     background: #f5f7f9;
   }
