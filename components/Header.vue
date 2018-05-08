@@ -3,7 +3,7 @@
     <div class="wrapPc">
         <el-row>
             <el-col :span="4">
-                logo
+                <img src="~/assets/img/logo.png" title="以太雾" >                
             </el-col>
             <el-col :span="8">
                 <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
@@ -60,3 +60,8 @@ export default {
     }
 }
 </script>
+<style lang="scss">
+    header{
+        height: 108px;
+    }
+</style>

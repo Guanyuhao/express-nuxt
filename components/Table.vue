@@ -10,60 +10,24 @@
         :label="item.label"
         :width="item.width"
         align='center'
-        :class-name='index==3&&isFee ? "c808080":""'>
+        :class-name='item.className?item.className:""'>
         </el-table-column>
     </el-table>
   </template>
 
   <script>
     export default {
+      props:{
+        tableCounm: Array,
+        tableData: Array
+      },
       data() {
         return {
-            isFee:true,
-            tableCounm:[
-                {
-                    prop:'blockNum',
-                    width:'',
-                    label:'快高度'
-                },
-                {
-                    prop:'time',
-                    width:'',
-                    label:'时间戳'
-                },
-                {
-                    prop:'tradnum',
-                    width:'',
-                    label:'交易数'
-                },
-                {
-                    prop:'currency',
-                    width:'',
-                    label:'奖励'
-                }
-            ],
-            tableData: [
-                {
-                    blockNum: '45156',
-                    time: +new Date(),
-                    tradnum: 123,
-                    currency: '123ETH'
-                }, 
-                {
-                    blockNum: '45156',
-                    time: +new Date(),
-                    tradnum: 123,
-                    currency: '123ETH'
-                }, 
-                {
-                    blockNum: '45156',
-                    time: +new Date(),
-                    tradnum: 123,
-                    currency: '123ETH'
-                }, 
-                
-            ]
+          
         }
+      },
+      created() {
+          
       },
       methods: {
         rowClick(row, event, column) {
@@ -91,8 +55,14 @@
         color: #333333;
     }
     .c808080 {
-      color: #808080
+      color: #808080;
     }
+    .el-table__row {
+        .c00b4ff{
+            color: #00b4ff;
+        }
+    }
+    
     .el-table__header th{
         background: #f3f3f4;
     }
