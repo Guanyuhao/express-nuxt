@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 const app = express()
-const host = process.env.HOST || '127.0.0.1'
+const host = process.env.HOST || '192.168.1.95'
 const port = process.env.PORT || 3000
 
 app.set('port', port)

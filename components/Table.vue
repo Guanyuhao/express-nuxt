@@ -1,7 +1,8 @@
   <template>
     <el-table
     :data="tableData"
-    style="width: 100%"
+    style="width: 100%;box-shadow: 0px 0px 20px #dcdcdc;
+    border-radius: 8px;"
     :row-class-name="tableRowClassName"
     stripe>
         <el-table-column v-for="(item, index) in tableCounm" 
@@ -64,7 +65,7 @@
     }
     
     .el-table__header th{
-        background: #f3f3f4;
+        background: #efefef;
     }
   }
   .el-table td, .el-table th.is-leaf{

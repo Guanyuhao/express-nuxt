@@ -6,12 +6,14 @@ module.exports = {
     title: '区块链浏览器',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // { name: 'viewport', content: 'user-scalable=yes' },
+      { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',},
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: '/js/scale.js'} 
     ]
   },
   /*
@@ -45,11 +47,13 @@ module.exports = {
   plugins: [
     { src: '~plugins/element-ui',ssr:false},
     { src: '~/plugins/i18n.js'},
-    { src: '~/plugins/components.js'}
+    // { src: '~/plugins/components.js'},
+    
+    
     
   ],
   build: {
-    vendor: ['axios','element-ui'],
+    vendor: ['axios','element-ui',''],
     /*
     ** Run ESLINT on save
     */

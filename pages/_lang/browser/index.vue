@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div class="browser_home">
 
      <div class="banner">
 
      </div>
-     <div class="table">
-       <div class="wrapPc home_tabel">
+     <div class="wrapPc">
+       <div class="home_tabel">
           <!-- <broTable style="width:calc(50% - 10px );float:left;"/>
           <div style="width:20px;float:left;"></div>
           <broTable style="width:calc(50% - 10px );float:left;" /> -->
@@ -85,7 +85,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .home{
+  .browser_home{
+    background: #f5f5f5;
     .home_tabel{
     //  overflow: hidden; 
      display: flex;

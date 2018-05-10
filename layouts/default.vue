@@ -40,6 +40,7 @@ export default {
 <style>
 .el-header,.el-footer,.el-main{
   padding: 0;
+  overflow: initial;
 }
 
 .button, .button:visited

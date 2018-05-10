@@ -63,5 +63,10 @@ export default {
 <style lang="scss">
     header{
         height: 108px;
+        padding-top:28px;
+        box-sizing: border-box;
+        .el-menu--horizontal {
+            border-bottom: none;
+        }
     }
 </style>
