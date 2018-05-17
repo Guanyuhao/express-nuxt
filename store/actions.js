@@ -149,5 +149,11 @@ export default {
       }
     })
     return data
+  },
+
+  async BLOK_LIST({ commit, state, getters}){
+    const { data } = await axios.get(`${getters.baseUrl}/blockList`)
+  
+    return {data }
   }
 }

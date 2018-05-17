@@ -5,19 +5,19 @@ import Config from '../config/index'
 
 let globalConfig = Config.globalConfig
 
-
 const User = mongoose.model('User')
 
 export const login = async(req,res,next) => {
   let { username, password } = req.body
   password = md5(password)
   
+  
   try {
     let user = await User.findOne({username: username, password: password}).exec()
     let secret = globalConfig.jwt.secret
     let expiresIn = globalConfig.jwt.expiresIn
     let token = jwt.sign({ username: user.username, userID: user._id }, secret)
-    res.cookie('isLogin',1,{ expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7) })
+    // res.cookie('isLogin',1,{ expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7) })
     res.json ({
       success: true,
       data: {
@@ -33,7 +33,7 @@ export const login = async(req,res,next) => {
 }
 
 export const logout = async(req,res,next) => {
-  res.cookie('isLogin',0)
+  
   res.json ( {
     success: true,
     data: {}
@@ -42,7 +42,7 @@ export const logout = async(req,res,next) => {
 
 export const register = async(req, res, next) => { 
   let { username, password } = req.body
-  password = md5(password)
+  password = md5(password)   
   let user = await User.findOne({username: username}).exec()
   if(!user){
     user = new User({ username, password })

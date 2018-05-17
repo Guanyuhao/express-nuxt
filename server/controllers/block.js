@@ -11,3 +11,10 @@ export const blockTest = async(req,res,next) => {
     
     res.json(data)
 }
+export const blockList = async(req,res,next) => {
+    //?currentPage=1&pageSize=10
+    const { data } = await axios.get(ServerBaseUrl+browser.blockList)
+
+    res.json(data)
+    
+}       

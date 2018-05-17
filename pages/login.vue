@@ -1,23 +1,27 @@
 <template>
   <section class="container">
       <div class="login_form">
-        <Form ref="formInline" :model="formInline" :rules="ruleInline" >
-          <FormItem prop="username">
-              <Input type="text" v-model="formInline.username" placeholder="Username">
-                  <Icon type="ios-person-outline" slot="prepend"></Icon>
-              </Input>
-          </FormItem>
-          <FormItem prop="password">
-              <Input type="password" v-model="formInline.password" placeholder="Password">
-                  <Icon type="ios-locked-outline" slot="prepend"></Icon>
-              </Input>
-          </FormItem>
-          <FormItem>
-              <Button type="primary" @click="handleSubmit('formInline')">登录</Button>
-              <!-- <Button type="primary" @click="handleSubmit('formInline')">注册</Button> -->
-              
-          </FormItem>
-        </Form>
+        <el-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
+        <el-form-item
+            label="用户名"
+            prop="username"
+            
+        >
+            <el-input type="username" v-model.number="numberValidateForm.username" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item
+            label="密码"
+            prop="password"
+           
+        >
+            <el-input type="password" v-model.number="numberValidateForm.password" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="login('numberValidateForm')">提交</el-button>
+            <el-button @click="resetForm('numberValidateForm')">重置</el-button>
+            <el-button @click="register('numberValidateForm')">注册</el-button>            
+        </el-form-item>
+        </el-form>
       </div>
   </section>
 </template>
@@ -35,44 +39,52 @@ export default {
       title: 'login'
     }
   },
-  data () {
+    data() {
       return {
-          formInline: {
-              username: '',
-              password: ''
-          },
-          ruleInline: {
-              username: [
-                  { required: true, message: 'Please fill in the user name', trigger: 'blur' }
-              ],
-              password: [
-                  { required: true, message: 'Please fill in the password.', trigger: 'blur' },
-                  { type: 'string', min: 4, message: 'The password length cannot be less than 6 bits', trigger: 'blur' }
-              ]
-          }
-      }
-  },
-  methods: {
-      handleSubmit(name) {
-          this.$refs[name].validate((valid) => {
-              if (valid) {
-                this.$store.dispatch('LOGIN', this.formInline).then(data => {
+        numberValidateForm: {
+          username: 'guan',
+          password:'guan'
+        }
+      };
+    },
+    methods: {
+      login(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+                this.$store.dispatch('LOGIN', this.numberValidateForm).then(data => {
                     if(data.success) {
-                        // this.$router.push('/admin/publish')
-                        this.$Message.success('Success!');
-                        
+                        this.$message('登录成功')
                     } else {
-                        // this.$refs.tip.openTip('用户名或密码不正确')
-                        this.$Message.error('用户名或密码不正确');                        
-                            
+                        this.$message.error('用户名或密码不正确!');         
                     }
                 })
-              } else {
-                  this.$Message.error('Fail!');
-              }
-          })
+          } else {
+              this.$message.error('error submit!');
+            return false;
+          }
+        });
+      },
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
+      },
+      register(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+                this.$store.dispatch('REGISTER', this.numberValidateForm).then(data => {
+                    if(data.success) {
+                        this.$message('登录成功')
+                    } else {
+                        this.$message.error('用户名或密码不正确!');
+                                    
+                    }
+                })
+          } else {
+              this.$message.error('error submit!');
+            return false;
+          }
+        });
       }
-  }
+    }
 }
 </script>
 

@@ -25,6 +25,10 @@ export default {
   components: {
     broTable
   },
+  async asyncData ({ store, route }) {
+    
+    
+  },
   data() {
     return {
       tableCounm:[
@@ -74,7 +78,7 @@ export default {
     }
   },
   created() {
-  
+  const data  =  this.$store.dispatch('BLOK_LIST')
     
   },
   beforeRouteEnter(to, from, next) {

@@ -30,8 +30,9 @@ export default {
     },
     browserApi: {
       pact:'http',
-      host: '192.168.1.230',
-      port: 80,
+      // host: '192.168.1.177',
+      host: '39.105.79.125',
+      port: 8080,
       routerBaseApi: ''      
     }
   }
