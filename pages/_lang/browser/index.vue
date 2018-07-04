@@ -78,7 +78,14 @@ export default {
     }
   },
   created() {
-  const data  =  this.$store.dispatch('BLOK_LIST')
+  // const data  =  this.$store.dispatch('BLOK_LIST')
+    // let data  = this.$store.dispatch('HUBI_DEPTH')
+
+  },
+  methods: {
+    init() {
+      
+    },
     
   },
   beforeRouteEnter(to, from, next) {

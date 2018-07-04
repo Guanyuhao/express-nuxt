@@ -25,6 +25,11 @@ router
     .get('/blockTest',blockTest)
     .get('/blockList',blockList)
 
+import {
+    huobiDepth
+} from '../controllers/hubi'
 
+router
+    .get('/hubiDepth',huobiDepth)
 
 export default router

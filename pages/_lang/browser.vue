@@ -39,6 +39,7 @@ export default {
   },
   created() {
     
+    
   },
   beforeRouteEnter(to, from, next) {
      next(vm => {

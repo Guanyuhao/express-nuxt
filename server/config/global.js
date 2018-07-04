@@ -34,6 +34,7 @@ export default {
       host: '39.105.79.125',
       port: 8080,
       routerBaseApi: ''      
-    }
+    },
+    
   }
   

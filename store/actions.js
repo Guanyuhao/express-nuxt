@@ -155,5 +155,11 @@ export default {
     const { data } = await axios.get(`${getters.baseUrl}/blockList`)
   
     return {data }
+  },
+
+  async HUBI_DEPTH({ commit, state, getters},symbol,type){
+    // const { data } = await axios.get(`${getters.baseUrl}/hubiDepth`)
+    const { data } = await axios.get(`https://api.huobipro.com/market/depth?symbol=${symbol||'btcusdt'}&type=${type||'step0'}`)
+    return {data }
   }
 }
