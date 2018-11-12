@@ -7,8 +7,8 @@ module.exports = {
 
     // First application
     {
-      name      : 'API',
-      script    : 'app.js',
+      name      : 'NUXT',
+      script    : 'cross-env NODE_ENV=production node build/main.js',
       env: {
         COMMON_VARIABLE: 'true'
       },
@@ -24,7 +24,7 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : 'node',
+      user : 'root',
       host : '47.104.141.41',
       ref  : 'origin/master',
       repo : 'git@github.com:Guanyuhao/express-nuxt.git',
@@ -32,11 +32,11 @@ module.exports = {
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
-      user : 'node',
+      user : 'root',
       host : '47.104.141.41',
-      ref  : 'origin/master',
+      ref  : 'origin/dev',
       repo : 'git@github.com:Guanyuhao/express-nuxt.git',
-      path : '/var/www/development',
+      path : '/home/develop/nuxt',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
