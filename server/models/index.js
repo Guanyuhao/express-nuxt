@@ -2,12 +2,9 @@ import mongoose from 'mongoose'
 import md5 from 'md5'
 import Config from '../config'
 
-
-
 let globalConfig = Config.globalConfig
 
 require('./user')
-
 
 const User = mongoose.model('User')
 
@@ -27,10 +24,7 @@ mongoose.connection
       await user.save()
       console.log('Administrator information initialization succeeded')
     }
-    
   })
   .on('error', (error) => {
     console.warn('database connect fail', error)
   })
-
- 

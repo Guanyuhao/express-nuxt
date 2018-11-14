@@ -15,11 +15,10 @@
 
 <script>
 
-
 export default {
   name: 'id',
   asyncData ({ params, error }) {
-    
+
   },
   head () {
     return {

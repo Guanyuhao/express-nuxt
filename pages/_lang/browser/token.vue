@@ -17,7 +17,7 @@
     components: {
 
       tokenList
-    },
+    }
   }
 </script>
 <style lang="scss" scoped>

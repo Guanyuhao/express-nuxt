@@ -4,10 +4,9 @@ import Config from '../config'
 
 let globalConfig = Config.globalConfig
 
-
 const User = mongoose.model('User')
 
-export default async(req, res, next) => {
+export default async (req, res, next) => {
   const token = req.get('token')
   if (token) {
     const decoded = jwt.verify(token, globalConfig.jwt.secret)
@@ -18,19 +17,19 @@ export default async(req, res, next) => {
       if (user._id && user.username) {
         await next()
       } else {
-        return (res.json ( {
+        return (res.json({
           success: false,
           err: 'Token is invalid'
         }))
       }
     } catch (e) {
-      return (res.json ( {
+      return (res.json({
         success: false,
         err: e
       }))
     }
   } else {
-    return (res.json ( {
+    return (res.json({
       success: false,
       err: 'Please login'
     }))

@@ -10,7 +10,7 @@ const UserSchema = new Schema({
   password: String,
   // email: String,
   // nickname: String,
-  // motto: String, 
+  // motto: String,
   // avatar: String,
   createdAt: {
     type: Date,
@@ -26,7 +26,7 @@ const UserSchema = new Schema({
 UserSchema.options.toJSON = {
   virtuals: true,
   versionKey: false,
-  transform(doc, ret) {
+  transform (doc, ret) {
     ret.id = ret._id
     delete ret._id
     delete ret.id

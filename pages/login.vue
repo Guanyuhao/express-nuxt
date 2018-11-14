@@ -39,52 +39,51 @@ export default {
       title: 'login'
     }
   },
-    data() {
-      return {
-        numberValidateForm: {
-          username: 'guan',
-          password:'guan'
-        }
-      };
-    },
-    methods: {
-      login(formName) {
-        this.$refs[formName].validate((valid) => {
-          if (valid) {
-                this.$store.dispatch('LOGIN', this.numberValidateForm).then(data => {
-                    if(data.success) {
-                        this.$message('登录成功')
-                    } else {
-                        this.$message.error('用户名或密码不正确!');         
-                    }
-                })
-          } else {
-              this.$message.error('error submit!');
-            return false;
-          }
-        });
-      },
-      resetForm(formName) {
-        this.$refs[formName].resetFields();
-      },
-      register(formName) {
-        this.$refs[formName].validate((valid) => {
-          if (valid) {
-                this.$store.dispatch('REGISTER', this.numberValidateForm).then(data => {
-                    if(data.success) {
-                        this.$message('登录成功')
-                    } else {
-                        this.$message.error('用户名或密码不正确!');
-                                    
-                    }
-                })
-          } else {
-              this.$message.error('error submit!');
-            return false;
-          }
-        });
+  data () {
+    return {
+      numberValidateForm: {
+        username: 'guan',
+        password: 'guan'
       }
     }
+  },
+  methods: {
+    login (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.$store.dispatch('LOGIN', this.numberValidateForm).then(data => {
+            if (data.success) {
+              this.$message('登录成功')
+            } else {
+              this.$message.error('用户名或密码不正确!')
+            }
+          })
+        } else {
+          this.$message.error('error submit!')
+          return false
+        }
+      })
+    },
+    resetForm (formName) {
+      this.$refs[formName].resetFields()
+    },
+    register (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.$store.dispatch('REGISTER', this.numberValidateForm).then(data => {
+            if (data.success) {
+              this.$message('登录成功')
+            } else {
+              this.$message.error('用户名或密码不正确!')
+            }
+          })
+        } else {
+          this.$message.error('error submit!')
+          return false
+        }
+      })
+    }
+  }
 }
 </script>
 

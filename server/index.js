@@ -1,20 +1,18 @@
 import express from 'express'
 import { Nuxt, Builder } from 'nuxt'
-var bodyParser = require('body-parser');
 
 import api from './api'
 
 import Config from './config'
+var bodyParser = require('body-parser')
 
 let globalConfig = Config.globalConfig
 
 let baseApi = globalConfig.app.routerBaseApi
-
-let baseUrl = `http://${globalConfig.app.host}:${globalConfig.app.port}`
-
-if(process.env.NODE_ENV === 'production') {
-  baseUrl = globalConfig.production.domain
-}
+// let baseUrl = `http://${globalConfig.app.host}:${globalConfig.app.port}`
+// if (process.env.NODE_ENV === 'production') {
+//   baseUrl = globalConfig.production.domain
+// }
 
 const app = express()
 // const host = process.env.HOST || '192.168.1.95'
@@ -24,9 +22,9 @@ app.set('port', port)
 
 // Import API Routes
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/'+baseApi, api)
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use('/' + baseApi, api)
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')

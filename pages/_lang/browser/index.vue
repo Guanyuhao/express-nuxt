@@ -19,40 +19,38 @@
 
 <script>
 
-
 import broTable from '~/components/Table.vue'
 export default {
   components: {
     broTable
   },
   async asyncData ({ store, route }) {
-    
-    
+
   },
-  data() {
+  data () {
     return {
-      tableCounm:[
+      tableCounm: [
         {
-          prop:'blockNum',
-          width:'',
-          label:'快高度',
-          className:'c00b4ff'
+          prop: 'blockNum',
+          width: '',
+          label: '快高度',
+          className: 'c00b4ff'
         },
         {
-          prop:'time',
-          width:'',
-          label:'时间戳'
+          prop: 'time',
+          width: '',
+          label: '时间戳'
         },
         {
-          prop:'tradnum',
-          width:'',
-          label:'交易数'
+          prop: 'tradnum',
+          width: '',
+          label: '交易数'
         },
         {
-          prop:'currency',
-          width:'',
-          label:'奖励',
-          className:'c808080',
+          prop: 'currency',
+          width: '',
+          label: '奖励',
+          className: 'c808080'
         }
       ],
       tableData: [
@@ -61,35 +59,35 @@ export default {
           time: +new Date(),
           tradnum: 123,
           currency: '123ETH'
-        }, 
+        },
         {
           blockNum: '45156',
           time: +new Date(),
           tradnum: 123,
           currency: '123ETH'
-        }, 
+        },
         {
           blockNum: '45156',
           time: +new Date(),
           tradnum: 123,
           currency: '123ETH'
-        }, 
+        }
       ]
     }
   },
-  created() {
+  created () {
   // const data  =  this.$store.dispatch('BLOK_LIST')
     // let data  = this.$store.dispatch('HUBI_DEPTH')
 
   },
   methods: {
-    init() {
-      
-    },
-    
+    init () {
+
+    }
+
   },
-  beforeRouteEnter(to, from, next) {
-     next(vm => {
+  beforeRouteEnter (to, from, next) {
+    next(vm => {
 
     })
   }
